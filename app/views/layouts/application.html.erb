@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css"  href="http://www.xverify.com/css/tooltip_style.css"  />
+    <script type="text/javascript" src="http://www.xverify.com/sharedjs/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.xverify.com/sharedjs/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="http://www.xverify.com/js/clients/reven/client.js"></script>
+    <script type="text/javascript" src="http://www.xverify.com/sharedjs/xverify.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+      bindRequiredInputFields();
+    });
+    </script>
   <title>Free Social Security Benefits Guide</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <meta name='viewport' content='width=device-width,initial-scale=1,target-densitydpi=device-dpi' />
   <meta name="google-site-verification" content="n9QIM8fLAT3zcROFwHAxVCz58GizB63PCtR1L-3dz2A" />
+
   <%= yield :head %>
 </head>
 <body>
