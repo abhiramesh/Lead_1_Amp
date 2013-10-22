@@ -10,32 +10,50 @@
 <script type="text/javascript">
 	$('#submit2').click(function(event) {
   		event.preventDefault();
-  		$.ajax({
-			type: "POST",
-			url: '/checkzip',
-			data: { zipcode: $('input#zipcode').val() },
-				  dataType: "script",
-				  async: false,
-				  success: function(response) {
-				  	var response = JSON.parse(response)
-					if (response == "no") {
-						event.preventDefault();
-						$('#zip_error').empty().append("Please enter a valid zipcode");
-					}
-					else {
-						$.ajax({
-						  type: "POST",
-						  url: $('#form2').attr('action'),
-						  data: { zipcode: $("#zipcode").val() },
-						  dataType: "script",
-						  async: false
-						});
-						$('#form2').hide();
-						$('#form3').show().insertAfter('div.progress');
-						$('.bar').attr('style', 'width:40%;');
-					}
-				  }
-		});
+  		if (/(^\d{5}$)|(^\d{5}-\d{4}$)/.test($('input#zipcode').val()) == false) {
+			event.preventDefault();
+			$('#zip_error').empty().append("Please enter a valid zipcode");
+		}
+		else{
+			$.ajax({
+				type: "POST",
+				url: $('#form2').attr('action'),
+				data: { zipcode: $("#zipcode").val() },
+				dataType: "script",
+				async: false
+			});
+			$('#form2').hide();
+			$('#form3').show().insertAfter('div.progress');
+			$('.bar').attr('style', 'width:40%;');
+		}
+  // 		$.ajax({
+		// 	type: "POST",
+		// 	url: '/checkzip',
+		// 	data: { zipcode: $('input#zipcode').val() },
+		// 		  dataType: "script",
+		// 		  async: false,
+		// 		  success: function(response) {
+		// 		  	var response = JSON.parse(response)
+		// 			if (response == "no") {
+		// 				event.preventDefault();
+		// 				$('#zip_error').empty().append("Please enter a valid zipcode");
+		// 			}
+		// 			else {
+		// 				$.ajax({
+		// 				  type: "POST",
+		// 				  url: $('#form2').attr('action'),
+		// 				  data: { zipcode: $("#zipcode").val() },
+		// 				  dataType: "script",
+		// 				  async: false
+		// 				});
+		// 				$('#form2').hide();
+		// 				$('#form3').show().insertAfter('div.progress');
+		// 				$('.bar').attr('style', 'width:40%;');
+		// 			}
+		// 		  }
+		// });
+
+
 	});
 	$('#back-link-1').click(function(){
 		$('#form2').hide();
@@ -43,22 +61,29 @@
 		$('#newsubmit1').empty().append($('<input class="submit" id="submit6" name="commit" type="submit" value="Next">'));
 	});
 	$('input#zipcode').blur(function(event){
-		$.ajax({
-			type: "POST",
-			url: '/checkzip',
-			data: { zipcode: $('input#zipcode').val() },
-				  dataType: "script",
-				  async: false,
-				  success: function(response) {
-				  	var response = JSON.parse(response)
-					if (response == "no") {
-						event.preventDefault();
-						$('#zip_error').empty().append("Please enter a valid zipcode");
-					}
-					if (response == "yes") {
-						$('#zip_error').empty();
-					}
-				  }
-		});
+		// $.ajax({
+		// 	type: "POST",
+		// 	url: '/checkzip',
+		// 	data: { zipcode: $('input#zipcode').val() },
+		// 		  dataType: "script",
+		// 		  async: false,
+		// 		  success: function(response) {
+		// 		  	var response = JSON.parse(response)
+		// 			if (response == "no") {
+		// 				event.preventDefault();
+		// 				$('#zip_error').empty().append("Please enter a valid zipcode");
+		// 			}
+		// 			if (response == "yes") {
+		// 				$('#zip_error').empty();
+		// 			}
+		// 		  }
+		// });
+		if (/(^\d{5}$)|(^\d{5}-\d{4}$)/.test($('input#zipcode').val()) == false) {
+			event.preventDefault();
+			$('#zip_error').empty().append("Please enter a valid zipcode");
+		}
+		else{
+			$('#zip_error').empty();
+		}
 	});
 </script>
