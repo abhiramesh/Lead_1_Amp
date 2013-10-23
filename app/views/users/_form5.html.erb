@@ -1,6 +1,6 @@
 <div id="form5">
 	<%= label_tag :attorney, 'Do you currently have a disability or attorney advocate?' %>
-	<%= select_tag :attorney, options_for_select(attorney_options) %>
+	<%= select_tag :attorney, options_for_select(attorney_options), :include_blank => true %>
 	<div class="desc">
 	</div>
 	<div class="message" id="attorney_error"></div>
@@ -11,22 +11,38 @@
 </div>
 
 <script type="text/javascript">
-	$('#submit5').click(function(event) {
-  		event.preventDefault();
-		$.ajax({
-		  type: "POST",
-		  url: $('#form5').attr('action'),
-		  data: { attorney: $("#attorney").val() },
-		  dataType: "script",
-		  async: false
+		$('#submit5').click(function(event) {
+	  		event.preventDefault();
+	  		if ($('#attorney').val() == "") {
+	  			event.preventDefault();
+				$('#attorney_error').empty().append("Please select an option");
+			}
+
+			if ($('#attorney').val() != "") {
+				$.ajax({
+				  type: "POST",
+				  url: $('#form5').attr('action'),
+				  data: { attorney: $("#attorney").val() },
+				  dataType: "script",
+				  async: false
+				});
+				$('#form5').hide();
+				$('#form5b').show().insertAfter('div.progress');
+				$('.bar').attr('style', 'width:88%;');
+			}
 		});
-		$('#form5').hide();
-		$('#form5b').show().insertAfter('div.progress');
-		$('.bar').attr('style', 'width:88%;');
-	});
 
 	$('#back-link-4').click(function(){
 		$('#form5').hide();
 		$('#form4').show().insertAfter('div.progress');
+	});
+
+	$('select#attorney').bind('click change',function() {
+		if ($('#attorney').val() != "") {
+			$('#attorney_error').empty();
+		}
+		if ($('#attorney').val() == "") {
+			$('#attorney_error').empty().append("Please select an option");
+		}
 	});
 </script>

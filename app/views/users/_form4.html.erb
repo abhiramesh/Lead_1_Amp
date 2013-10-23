@@ -1,6 +1,6 @@
 <div id="form4">
 	<%= label_tag :medical, 'Have you seen a doctor in the last 6 months?' %>
-	<%= select_tag :medical, options_for_select(medical_options) %>
+	<%= select_tag :medical, options_for_select(medical_options), :include_blank => true %>
 	<div class="desc">
 		You need to have a medical record within the past 6 months to qualify.
 	</div>
@@ -12,21 +12,39 @@
 </div>
 
 <script type="text/javascript">
-	$('#submit4').click(function(event) {
-  		event.preventDefault();
-		$.ajax({
-		  type: "POST",
-		  url: $('#form4').attr('action'),
-		  data: { medical: $("#medical").val() },
-		  dataType: "script",
-		  async: false
+	
+		$('#submit4').click(function(event) {
+	  		event.preventDefault();
+	  		if ($('#medical').val() == "") {
+				event.preventDefault();
+				$('#medical_error').empty().append("Please select an option");
+			}
+
+			if ($('#medical').val() != "") {
+				$.ajax({
+				  type: "POST",
+				  url: $('#form4').attr('action'),
+				  data: { medical: $("#medical").val() },
+				  dataType: "script",
+				  async: false
+				});
+				$('#form4').hide();
+				$('#form5').show().insertAfter('div.progress');
+				$('.bar').attr('style', 'width:80%;');
+			}
 		});
-		$('#form4').hide();
-		$('#form5').show().insertAfter('div.progress');
-		$('.bar').attr('style', 'width:80%;');
-	});
+
 	$('#back-link-3').click(function(){
 		$('#form4').hide();
 		$('#form3').show().insertAfter('div.progress');
+	});
+
+	$('select#medical').bind('click change',function() {
+		if ($('#medical').val() != "") {
+			$('#medical_error').empty();
+		}
+		if ($('#medical').val() == "") {
+			$('#medical_error').empty().append("Please select an option");
+		}
 	});
 </script>

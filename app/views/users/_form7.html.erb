@@ -12,8 +12,8 @@
 	<div class="desc">
 	</div>
 	<div id="consent">
-		<%= f.check_box :consent, {:checked => true}, "Yes", "No" %>
-		I agree to be contacted by phone or email according to these <a target="_blank" href="/privacy">terms</a>
+		<%= f.check_box :consent, {:checked => false}, "Yes", "No" %>
+		I consent to be called and/or texted by or on behalf of this inquiry by an autodialer or a prerecorded voice message at the number above. My consent does not require purchase. Standard cellular rates will apply if applicable.
 	</div>
 	<div class="message" id="phone_error"></div>
 	<div class="message" id="email_error"></div>

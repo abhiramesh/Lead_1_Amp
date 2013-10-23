@@ -1,6 +1,6 @@
 <div id="form5b">
 	<%= label_tag :previous, 'Have you previously applied for disability benefits?' %>
-	<%= select_tag :previous, options_for_select(previous_options) %>
+	<%= select_tag :previous, options_for_select(previous_options), :include_blank => true %>
 	<div class="desc">
 	</div>
 	<div class="message" id="previous_error"></div>
@@ -13,20 +13,34 @@
 <script type="text/javascript">
 	$('#submit5b').click(function(event) {
   		event.preventDefault();
-		$.ajax({
-		  type: "POST",
-		  url: $('#form5b').attr('action'),
-		  data: { previous: $("#previous").val() },
-		  dataType: "script",
-		  async: false
-		});
-		$('#form5b').hide();
-		$('#form5c').show().insertAfter('div.progress');
-		$('.bar').attr('style', 'width:92%;');
+  		if ($('#previous').val() == "") {
+			$('#previous_error').empty().append("Please select an option");
+		}
+		if ($('#previous').val() != "") {
+			$.ajax({
+			  type: "POST",
+			  url: $('#form5b').attr('action'),
+			  data: { previous: $("#previous").val() },
+			  dataType: "script",
+			  async: false
+			});
+			$('#form5b').hide();
+			$('#form5c').show().insertAfter('div.progress');
+			$('.bar').attr('style', 'width:92%;');
+		}
 	});
 
 	$('#back-link-5b').click(function(){
 		$('#form5b').hide();
 		$('#form5').show().insertAfter('div.progress');
+	});
+
+	$('select#previous').bind('click change',function() {
+		if ($('#previous').val() != "") {
+			$('#previous_error').empty();
+		}
+		if ($('#previous').val() == "") {
+			$('#previous_error').empty().append("Please select an option");
+		}
 	});
 </script>

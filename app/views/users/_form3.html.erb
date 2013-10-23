@@ -1,6 +1,6 @@
 <div id="form3">
 	<%= label_tag :employment, 'Do you expect to be unemployed or making less than $1500 per month?' %>
-	<%= select_tag :employment, options_for_select(employment_options) %>
+	<%= select_tag :employment, options_for_select(employment_options), :include_blank => true %>
 	<div class="desc">
 	</div>
 	<div class="message" id="employment_error"></div>
@@ -13,21 +13,35 @@
 <script type="text/javascript">
 	$('#submit3').click(function(event) {
   		event.preventDefault();
-		$.ajax({
-		  type: "POST",
-		  url: $('#form3').attr('action'),
-		  data: { employment: $("#employment").val() },
-		  dataType: "script",
-		  async: false
-		});
-		$('#form3').hide();
-		$('#form4').show().insertAfter('div.progress');
-		$('.bar').attr('style', 'width:60%;');
+  		if ($('#employment').val() == "") {
+			event.preventDefault();
+			$('#employment_error').empty().append("Please select an option");
+		}
+		if ($('#employment').val() != "") {
+			$.ajax({
+			  type: "POST",
+			  url: $('#form3').attr('action'),
+			  data: { employment: $("#employment").val() },
+			  dataType: "script",
+			  async: false
+			});
+			$('#form3').hide();
+			$('#form4').show().insertAfter('div.progress');
+			$('.bar').attr('style', 'width:60%;');
+		}
 	});
 
 	$('#back-link-2').click(function(){
 		$('#form3').hide();
 		$('#form2').show().insertAfter('div.progress');
 		$('#newsubmit2').empty().append($('<input class="submit" id="submit7" name="commit" type="submit" value="Next">'));
+	});
+	$('select#employment').bind('click change',function() {
+		if ($('#employment').val() != "") {
+			$('#employment_error').empty();
+		}
+		if ($('#employment').val() == "") {
+			$('#employment_error').empty().append("Please select an option");
+		}
 	});
 </script>
