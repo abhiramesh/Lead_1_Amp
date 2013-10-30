@@ -84,6 +84,7 @@
 
   .progress {
     width: 90px !important;
+    margin-left: 40% !important;
   }
 
   .submit {
@@ -94,24 +95,32 @@
     width: 80%;
   }
 
+  #form1{
+  padding-left: 5% !important;
+  }
+
+  #form2{
+    padding-left: 5% !important;
+  }
+
   #form3 {
-    padding-left: 6% !important;
+    padding-left: 5% !important;
   }
 
   #form4 {
-    padding-left: 6% !important;
+    padding-left: 5% !important;
   }
 
   #form5 {
-    padding-left: 6% !important;
+    padding-left: 5% !important;
   }  
 
   #form5b {
-    padding-left: 6% !important;
+    padding-left: 5% !important;
   }
 
   #form5c {
-    padding-left: 6% !important;
+    padding-left: 5% !important;
   }
 
   #form6 {
@@ -119,7 +128,20 @@
   }
 
   #form7 {
-    padding-left: 6% !important;
+    padding-left: 5% !important;
+  }
+
+  #consent {
+    font-size: 7px !important;
+    width: 98% !important;
+  }
+
+  div.span2 {
+    margin-left: 10px !important;
+  }
+
+  .phrase2{
+    display: none;
   }
 }
 
