@@ -209,7 +209,7 @@ class UsersController < ApplicationController
           redirect_to '/extrainfo1'
         elsif @user.phone && @user.qualified == false && @user.loan == nil
           redirect_to '/extrainfo2'
-        elsif @user.phone && @user.loan != nil && @user.debt != nil
+        elsif @user.phone && @user.name && @user.loan != nil && @user.debt != nil
             a = Mechanize.new
             geo = GeoKit::Geocoders::MultiGeocoder.multi_geocoder(@user.zipcode)
             if geo.success
@@ -255,8 +255,7 @@ class UsersController < ApplicationController
           redirect_to '/logout'
         end
       else
-        format.html { render action: "edit" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        redirect_to '/logout'
       end
   end
 
