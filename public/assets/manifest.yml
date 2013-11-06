@@ -3,14 +3,8 @@ arrow.png: arrow-56e24cb48276e80c6592242440ef5814.png
 arrow/index.png: arrow-56e24cb48276e80c6592242440ef5814.png
 bbb.png: bbb-ff5fca9912938740c9df30f7224ef52f.png
 bbb/index.png: bbb-ff5fca9912938740c9df30f7224ef52f.png
-bg1.png: bg1-9754480a0e01a3a4f41f3b553a2f2cb4.png
-bg1/index.png: bg1-9754480a0e01a3a4f41f3b553a2f2cb4.png
-bg2.png: bg2-a1e219a5675e895e863ee84fc4687de3.png
-bg2/index.png: bg2-a1e219a5675e895e863ee84fc4687de3.png
-bgimg.png: bgimg-b8ab03fa70166718a79b004adbdac51f.png
-bgimg/index.png: bgimg-b8ab03fa70166718a79b004adbdac51f.png
-box.png: box-b2c710718c756095410d8162c113efa4.png
-box/index.png: box-b2c710718c756095410d8162c113efa4.png
+bgimg.png: bgimg-9499425f2773248910db3494322fb13b.png
+bgimg/index.png: bgimg-9499425f2773248910db3494322fb13b.png
 form.png: form-8152c289cb3531e67cbde97ecefe5d17.png
 form/index.png: form-8152c289cb3531e67cbde97ecefe5d17.png
 header.png: header-1a0044c6d091c7c722e00ae73b76e549.png
@@ -19,8 +13,6 @@ logo.png: logo-114bb26b98598b1227fc2df29b62b216.png
 logo/index.png: logo-114bb26b98598b1227fc2df29b62b216.png
 logos.png: logos-21b5c04b5bc1ad3a291eeab7678e4ed9.png
 logos/index.png: logos-21b5c04b5bc1ad3a291eeab7678e4ed9.png
-phone.png: phone-e437f2033c2b5c37d4f19af4c73b2022.png
-phone/index.png: phone-e437f2033c2b5c37d4f19af4c73b2022.png
 application.js: application-de18d7e6b44271513c9d6f27ea57b7ac.js
 application/index.js: application-de18d7e6b44271513c9d6f27ea57b7ac.js
 application.css: application-9fb46bb9d39e6b6cc631742a9f8d2e21.css
