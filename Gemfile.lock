@@ -91,6 +91,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rack-zippy (1.0.1)
     rails (3.2.11)
       actionmailer (= 3.2.11)
       actionpack (= 3.2.11)
@@ -150,6 +151,7 @@ DEPENDENCIES
   mechanize
   newrelic_rpm
   pg (= 0.14.1)
+  rack-zippy
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
