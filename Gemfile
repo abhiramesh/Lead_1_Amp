@@ -16,6 +16,7 @@ gem 'mechanize'
 gem 'json'
 gem 'newrelic_rpm'
 gem 'rack-zippy'
+gem 'delayed_job_active_record'
 
 # Gems used only for assets and not required
 # in production environments by default.

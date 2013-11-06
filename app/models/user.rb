@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :zipcode, :home_value, :mortgage_balance, :name, :email, :phone, :age, :employment, :attorney, :medical, :lead, :ip, :campaign, :debt, :loan, :previous, :desc, :trusted, :consent
 
+  require 'mechanize'
+  require 'geokit'
 
   # def self.to_csv
   #   CSV.generate(col_sep: "\t") do |csv|
@@ -22,5 +24,97 @@ class User < ActiveRecord::Base
   #     end
   #   end
   # end
+
+  def send_lead
+          a = Mechanize.new
+            geo = GeoKit::Geocoders::MultiGeocoder.multi_geocoder(self.zipcode)
+            if geo.success
+              state = geo.state
+            else
+              state = ""
+            end
+            if self.campaign.to_s.downcase.include? "vinny"
+              lead_src = "PUJ"
+            elsif self.campaign == "other"
+              lead_src = "REV"
+            else
+              lead_src = "RAW"
+            end
+              url = "https://leads.leadtracksystem.com/genericPostlead.php"
+              params = {
+                "TYPE" => '85',
+                "SRC" => "PujiiComp1",
+                "Trusted_Form" => self.trusted,
+                "Landing_Page" => "amp1",
+                "IP_Address" => "75.2.92.149",
+                "First_Name" => self.name.split(' ')[0],
+                "Last_Name" => self.name.split(' ')[1],
+                "State" => state,
+                "Zip" => self.zipcode,
+                "Email" => self.email,
+                "Day_Phone" => self.phone,
+                "Evening_Phone" => self.phone,
+                "Age" => self.age,
+                "Employment_Status" => self.employment,
+                "Medical_Status" => self.medical,
+                "Representation_Status" => self.attorney,
+                "Previously_Applied" => self.previous,
+                "Unsecured Debt" => "No, I do not need help",
+                "Student Loans" => "No, I do not need student debt help",
+                "Description" => self.desc,
+                "Pub_ID" => lead_src
+              }
+              response = a.post(url, params)
+              puts d = Nokogiri::XML(response.content)
+              self.lead = d.xpath("//lead_id").text
+              self.save!
+  end
+
+
+  def send_lead_2
+    a = Mechanize.new
+            geo = GeoKit::Geocoders::MultiGeocoder.multi_geocoder(self.zipcode)
+            if geo.success
+              state = geo.state
+            else
+              state = ""
+            end
+              if self.campaign.to_s.downcase.include? "vinny"
+                lead_src = "PUJ"
+              elsif self.campaign == "other"
+                lead_src = "REV"
+              else
+                lead_src = "RAW"
+              end
+              url = "https://leads.leadtracksystem.com/genericPostlead.php"
+              params = {
+                "TYPE" => '85',
+                "SRC" => "PujiiComp1",
+                "Trusted_Form" => self.trusted,
+                "Landing_Page" => "amp1",
+                "IP_Address" => "75.2.92.149",
+                "First_Name" => self.name.split(' ')[0],
+                "Last_Name" => self.name.split(' ')[1],
+                "State" => state,
+                "Zip" => self.zipcode,
+                "Email" => self.email,
+                "Day_Phone" => self.phone,
+                "Evening_Phone" => self.phone,
+                "Age" => self.age,
+                "Employment_Status" => self.employment,
+                "Medical_Status" => self.medical,
+                "Representation_Status" => self.attorney,
+                "Previously_Applied" => self.previous,
+                "Unsecured Debt" => self.debt,
+                "Student Loans" => self.loan,
+                "Description" => self.desc,
+                "Pub_ID" => lead_src
+              }
+              response = a.post(url, params)
+              puts d = Nokogiri::XML(response.content)
+              self.lead = d.xpath("//lead_id").text
+              self.save!
+  end
+
 
 end
