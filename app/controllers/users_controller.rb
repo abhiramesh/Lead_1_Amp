@@ -158,6 +158,8 @@ class UsersController < ApplicationController
     end
       if @user.update_attributes(params[:user])
         if @user.phone && @user.email && @user.name && @user.zipcode && @user.age.to_i >= 30 && @user.employment == "Making less than $1500 per month" && @user.attorney == "No" && @user.medical == "Yes"
+          @user.qualified = true
+          @user.save!
           @user.delay.send_lead
             # a = Mechanize.new
             # geo = GeoKit::Geocoders::MultiGeocoder.multi_geocoder(@user.zipcode)
