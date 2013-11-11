@@ -141,7 +141,7 @@ class UsersController < ApplicationController
       @user.save!
     end
     if params["email"]
-      @user.email = params["email"]
+      @user.email = params["email"].gsub(/\s+/, "")
       @user.save!
     end
     if params["consent"]

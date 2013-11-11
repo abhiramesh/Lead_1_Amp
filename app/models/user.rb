@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   require 'mechanize'
   require 'geokit'
-  #require 'area'
+  require 'area'
 
   # def self.to_csv
   #   CSV.generate(col_sep: "\t") do |csv|
@@ -28,11 +28,10 @@ class User < ActiveRecord::Base
 
   def send_lead
           a = Mechanize.new
-            # geo = GeoKit::Geocoders::MultiGeocoder.multi_geocoder(self.zipcode)
-            # if geo.success
-            #   state = geo.state
-            # else
-              state = ""
+            # begin
+            # state = self.zipcode.to_region(state: true)
+            # rescue
+            # state = ""
             # end
             if self.campaign.to_s.downcase.include? "vinny"
               lead_src = "PUJ"
@@ -74,11 +73,10 @@ class User < ActiveRecord::Base
 
   def send_lead_2
     a = Mechanize.new
-            # geo = GeoKit::Geocoders::MultiGeocoder.multi_geocoder(self.zipcode)
-            # if geo.success
-            #   state = geo.state
-            # else
-              state = ""
+            # begin
+            # state = self.zipcode.to_region(state: true)
+            # rescue
+            # state = ""
             # end
               if self.campaign.to_s.downcase.include? "vinny"
                 lead_src = "PUJ"
