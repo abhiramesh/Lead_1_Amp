@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
             # begin
             # state = self.zipcode.to_region(state: true)
             # rescue
-            # state = ""
+             state = ""
             # end
             if self.campaign.to_s.downcase.include? "vinny"
               lead_src = "PUJ"
@@ -73,10 +73,11 @@ class User < ActiveRecord::Base
 
   def send_lead_2
     a = Mechanize.new
-            # begin
-            # state = self.zipcode.to_region(state: true)
-            # rescue
-            # state = ""
+            # geo = GeoKit::Geocoders::MultiGeocoder.multi_geocoder(self.zipcode)
+            # if geo.success
+            #   state = geo.state
+            # else
+              state = ""
             # end
               if self.campaign.to_s.downcase.include? "vinny"
                 lead_src = "PUJ"
