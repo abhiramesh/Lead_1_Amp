@@ -23,13 +23,23 @@
 .header-phone{
   width: 400px;
   position: relative;
-  top: 10px;
-  left: 80px
+  top: -38px;
+  left: 300px;
+  color: orangered;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 @media (max-width: 960px) {
   .header-phone {
-    display: none;
+    position: inherit;
+    padding: 10px;
+    color: white;
+    background: orange;
+    border-radius: 5px;
+    width: 90%;
+    margin-top: 10px;
+    
   }
 }
 
@@ -148,8 +158,8 @@
 .logo{
   width: 350px;
   position: relative;
-  top: 15px;
-  left: -260px;
+  top: 7px;
+  left: -250px;
 }
 
 @media (max-width: 960px) {

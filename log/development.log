@@ -62824,3 +62824,928 @@ Served asset /bgimg.png - 304 Not Modified (0ms)
   [1m[35mDelayed::Backend::ActiveRecord::Job Load (0.9ms)[0m  UPDATE "delayed_jobs" SET locked_at = '2013-11-06 21:07:37.236983', locked_by = 'host:levyvlan538.0322.wlan.wireless-pennnet.upenn.edu pid:78735' WHERE id IN (SELECT id FROM "delayed_jobs" WHERE ((run_at <= '2013-11-06 21:07:37.236421' AND (locked_at IS NULL OR locked_at < '2013-11-06 17:07:37.236446') OR locked_by = 'host:levyvlan538.0322.wlan.wireless-pennnet.upenn.edu pid:78735') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *
   [1m[36mDelayed::Backend::ActiveRecord::Job Load (1.3ms)[0m  [1mUPDATE "delayed_jobs" SET locked_at = '2013-11-06 21:07:42.240547', locked_by = 'host:levyvlan538.0322.wlan.wireless-pennnet.upenn.edu pid:78735' WHERE id IN (SELECT id FROM "delayed_jobs" WHERE ((run_at <= '2013-11-06 21:07:42.239736' AND (locked_at IS NULL OR locked_at < '2013-11-06 17:07:42.239765') OR locked_by = 'host:levyvlan538.0322.wlan.wireless-pennnet.upenn.edu pid:78735') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 1 FOR UPDATE) RETURNING *[0m
   [1m[35mSQL (25.1ms)[0m  UPDATE "delayed_jobs" SET "locked_by" = NULL, "locked_at" = NULL WHERE "delayed_jobs"."locked_by" = 'host:levyvlan538.0322.wlan.wireless-pennnet.upenn.edu pid:78735'
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing a block to devise_for is deprecated. Please remove the block from devise_for (only the block, the call to devise_for must still exist) and call devise_scope :user do ... end with the block instead. (called from block in <top (required)> at /Users/abhiramesh/rails_projects/lead_1_amp/config/routes.rb:3)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing a block to devise_for is deprecated. Please remove the block from devise_for (only the block, the call to devise_for must still exist) and call devise_scope :user do ... end with the block instead. (called from block in <top (required)> at /Users/abhiramesh/rails_projects/lead_1_amp/config/routes.rb:3)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:11:05 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (1.2ms)
+  Rendered users/_form3.html.erb (1.1ms)
+  Rendered users/_form4.html.erb (0.8ms)
+  Rendered users/_form5.html.erb (1.5ms)
+  Rendered users/_form5b.html.erb (1.4ms)
+  Rendered users/_form5c.html.erb (98.1ms)
+  Rendered users/_form6.html.erb (1.4ms)
+  Rendered users/_form7.html.erb (95.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (377.0ms)
+Completed 200 OK in 1059ms (Views: 679.8ms | ActiveRecord: 342.0ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /registration.js - 200 OK (1ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /registration.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /static_pages.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /scaffolds.css - 200 OK (7ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /static_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:07 -0500
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:11:08 -0500
+Served asset /logo.png - 200 OK (18ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:11:08 -0500
+Served asset /logos.png - 200 OK (20ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:11:08 -0500
+Served asset /form.png - 200 OK (10ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:11:08 -0500
+Served asset /bgimg.png - 200 OK (10ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.1ms)
+  Rendered users/_form3.html.erb (0.6ms)
+  Rendered users/_form4.html.erb (0.3ms)
+  Rendered users/_form5.html.erb (0.4ms)
+  Rendered users/_form5b.html.erb (0.2ms)
+  Rendered users/_form5c.html.erb (0.9ms)
+  Rendered users/_form6.html.erb (0.5ms)
+  Rendered users/_form7.html.erb (2.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /registration.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /registration.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:11:56 -0500
+Served asset /logos.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:11:57 -0500
+Served asset /form.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:11:57 -0500
+Served asset /bgimg.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.4ms)
+  Rendered users/_form3.html.erb (0.6ms)
+  Rendered users/_form4.html.erb (0.2ms)
+  Rendered users/_form5.html.erb (0.2ms)
+  Rendered users/_form5b.html.erb (0.3ms)
+  Rendered users/_form5c.html.erb (0.5ms)
+  Rendered users/_form6.html.erb (0.3ms)
+  Rendered users/_form7.html.erb (3.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 150ms (Views: 148.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /registration.css - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /static_pages.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /scaffolds.css - 200 OK (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /registration.js - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /static_pages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:12:57 -0500
+Served asset /logos.png - 200 OK (0ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:12:58 -0500
+Served asset /form.png - 200 OK (0ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:12:58 -0500
+Served asset /bgimg.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:14:33 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.1ms)
+  Rendered users/_form3.html.erb (0.2ms)
+  Rendered users/_form4.html.erb (0.2ms)
+  Rendered users/_form5.html.erb (0.1ms)
+  Rendered users/_form5b.html.erb (0.2ms)
+  Rendered users/_form5c.html.erb (0.4ms)
+  Rendered users/_form6.html.erb (1.0ms)
+  Rendered users/_form7.html.erb (3.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (21.8ms)
+Completed 500 Internal Server Error in 260ms
+
+ActionView::Template::Error (Invalid CSS after "  color": expected ";", was ": orangered;"
+  (in /Users/abhiramesh/rails_projects/lead_1_amp/app/assets/stylesheets/scaffolds.css.scss)):
+    2: <html>
+    3: <head>
+    4:   <title>Free Social Security Benefits Guide</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8:   <meta name='viewport' content='width=device-width,initial-scale=1,target-densitydpi=device-dpi' />
+  app/assets/stylesheets/scaffolds.css.scss:28
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1064882340999130226_2194082220'
+
+
+  Rendered /Users/abhiramesh/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/abhiramesh/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/abhiramesh/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:14:34 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.3ms)
+  Rendered users/_form3.html.erb (0.5ms)
+  Rendered users/_form4.html.erb (0.2ms)
+  Rendered users/_form5.html.erb (0.5ms)
+  Rendered users/_form5b.html.erb (0.3ms)
+  Rendered users/_form5c.html.erb (0.9ms)
+  Rendered users/_form6.html.erb (0.5ms)
+  Rendered users/_form7.html.erb (2.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (29.0ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (Invalid CSS after "  color": expected ";", was ": orangered;"
+  (in /Users/abhiramesh/rails_projects/lead_1_amp/app/assets/stylesheets/scaffolds.css.scss)):
+    2: <html>
+    3: <head>
+    4:   <title>Free Social Security Benefits Guide</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8:   <meta name='viewport' content='width=device-width,initial-scale=1,target-densitydpi=device-dpi' />
+  app/assets/stylesheets/scaffolds.css.scss:28
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1064882340999130226_2194082220'
+
+
+  Rendered /Users/abhiramesh/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/abhiramesh/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/abhiramesh/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (158.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:14:35 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.3ms)
+  Rendered users/_form3.html.erb (0.2ms)
+  Rendered users/_form4.html.erb (0.2ms)
+  Rendered users/_form5.html.erb (0.2ms)
+  Rendered users/_form5b.html.erb (0.2ms)
+  Rendered users/_form5c.html.erb (0.5ms)
+  Rendered users/_form6.html.erb (0.3ms)
+  Rendered users/_form7.html.erb (1.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (19.9ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (Invalid CSS after "  color": expected ";", was ": orangered;"
+  (in /Users/abhiramesh/rails_projects/lead_1_amp/app/assets/stylesheets/scaffolds.css.scss)):
+    2: <html>
+    3: <head>
+    4:   <title>Free Social Security Benefits Guide</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8:   <meta name='viewport' content='width=device-width,initial-scale=1,target-densitydpi=device-dpi' />
+  app/assets/stylesheets/scaffolds.css.scss:28
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1064882340999130226_2194082220'
+
+
+  Rendered /Users/abhiramesh/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/abhiramesh/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/abhiramesh/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:14:40 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.3ms)
+  Rendered users/_form3.html.erb (0.2ms)
+  Rendered users/_form4.html.erb (0.6ms)
+  Rendered users/_form5.html.erb (0.2ms)
+  Rendered users/_form5b.html.erb (0.2ms)
+  Rendered users/_form5c.html.erb (0.5ms)
+  Rendered users/_form6.html.erb (0.3ms)
+  Rendered users/_form7.html.erb (2.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (19.5ms)
+Compiled scaffolds.css  (1929ms)  (pid 41290)
+Compiled application.css  (1ms)  (pid 41290)
+Completed 200 OK in 2246ms (Views: 2245.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /scaffolds.css - 200 OK (16ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /registration.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /application.css - 200 OK (25ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /static_pages.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /registration.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /static_pages.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /logos.png - 200 OK (0ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /form.png - 200 OK (0ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:14:43 -0500
+Served asset /bgimg.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:16:06 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.1ms)
+  Rendered users/_form3.html.erb (0.2ms)
+  Rendered users/_form4.html.erb (0.2ms)
+  Rendered users/_form5.html.erb (0.2ms)
+  Rendered users/_form5b.html.erb (0.2ms)
+  Rendered users/_form5c.html.erb (0.6ms)
+  Rendered users/_form6.html.erb (0.4ms)
+  Rendered users/_form7.html.erb (1.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (17.1ms)
+Compiled scaffolds.css  (1354ms)  (pid 41290)
+Compiled application.css  (1ms)  (pid 41290)
+Completed 200 OK in 1536ms (Views: 1535.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /application.css - 200 OK (14ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /static_pages.css - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /registration.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /scaffolds.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /registration.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /static_pages.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /logos.png - 200 OK (0ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /form.png - 200 OK (0ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:16:08 -0500
+Served asset /bgimg.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:16:56 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.3ms)
+  Rendered users/_form3.html.erb (0.4ms)
+  Rendered users/_form4.html.erb (0.4ms)
+  Rendered users/_form5.html.erb (0.4ms)
+  Rendered users/_form5b.html.erb (0.3ms)
+  Rendered users/_form5c.html.erb (1.0ms)
+  Rendered users/_form6.html.erb (0.4ms)
+  Rendered users/_form7.html.erb (3.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (266.4ms)
+Completed 200 OK in 288ms (Views: 286.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /registration.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /static_pages.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /registration.js - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /static_pages.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:16:57 -0500
+Served asset /logos.png - 200 OK (0ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:16:58 -0500
+Served asset /form.png - 200 OK (0ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:16:58 -0500
+Served asset /bgimg.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:18:13 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.3ms)
+  Rendered users/_form3.html.erb (0.3ms)
+  Rendered users/_form4.html.erb (0.3ms)
+  Rendered users/_form5.html.erb (0.3ms)
+  Rendered users/_form5b.html.erb (0.2ms)
+  Rendered users/_form5c.html.erb (0.6ms)
+  Rendered users/_form6.html.erb (0.3ms)
+  Rendered users/_form7.html.erb (2.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (23.0ms)
+Compiled scaffolds.css  (1432ms)  (pid 41290)
+Compiled application.css  (2ms)  (pid 41290)
+Completed 200 OK in 1872ms (Views: 1871.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /registration.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /static_pages.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /scaffolds.css - 200 OK (102ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /registration.js - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /static_pages.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /logos.png - 200 OK (0ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /form.png - 200 OK (0ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:18:15 -0500
+Served asset /bgimg.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:18:32 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.2ms)
+  Rendered users/_form3.html.erb (0.2ms)
+  Rendered users/_form4.html.erb (0.2ms)
+  Rendered users/_form5.html.erb (0.2ms)
+  Rendered users/_form5b.html.erb (0.2ms)
+  Rendered users/_form5c.html.erb (0.4ms)
+  Rendered users/_form6.html.erb (0.3ms)
+  Rendered users/_form7.html.erb (1.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (16.6ms)
+Compiled scaffolds.css  (1259ms)  (pid 41290)
+Compiled application.css  (1ms)  (pid 41290)
+Completed 200 OK in 1429ms (Views: 1428.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /registration.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /scaffolds.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /registration.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:18:33 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:18:34 -0500
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:18:34 -0500
+Served asset /logos.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:18:34 -0500
+Served asset /bgimg.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:18:34 -0500
+Served asset /form.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:22:44 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.2ms)
+  Rendered users/_form3.html.erb (0.3ms)
+  Rendered users/_form4.html.erb (0.3ms)
+  Rendered users/_form5.html.erb (0.2ms)
+  Rendered users/_form5b.html.erb (0.3ms)
+  Rendered users/_form5c.html.erb (0.5ms)
+  Rendered users/_form6.html.erb (0.5ms)
+  Rendered users/_form7.html.erb (1.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (117.9ms)
+Compiled scaffolds.css  (1753ms)  (pid 41290)
+Compiled application.css  (2ms)  (pid 41290)
+Completed 200 OK in 2656ms (Views: 2655.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /registration.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /application.css - 200 OK (17ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /scaffolds.css - 200 OK (7ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /static_pages.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /registration.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /static_pages.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /logos.png - 200 OK (0ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /bgimg.png - 200 OK (0ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:22:47 -0500
+Served asset /form.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:22:59 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.2ms)
+  Rendered users/_form3.html.erb (0.3ms)
+  Rendered users/_form4.html.erb (5.3ms)
+  Rendered users/_form5.html.erb (0.2ms)
+  Rendered users/_form5b.html.erb (0.2ms)
+  Rendered users/_form5c.html.erb (1.0ms)
+  Rendered users/_form6.html.erb (0.4ms)
+  Rendered users/_form7.html.erb (1.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (26.7ms)
+Compiled scaffolds.css  (1222ms)  (pid 41290)
+Compiled application.css  (2ms)  (pid 41290)
+Completed 200 OK in 1405ms (Views: 1404.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /scaffolds.css - 200 OK (8ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /registration.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /registration.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /logos.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /bgimg.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:23:01 -0500
+Served asset /form.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-13 22:23:12 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered users/_form2.html.erb (0.2ms)
+  Rendered users/_form3.html.erb (0.2ms)
+  Rendered users/_form4.html.erb (0.2ms)
+  Rendered users/_form5.html.erb (0.2ms)
+  Rendered users/_form5b.html.erb (0.2ms)
+  Rendered users/_form5c.html.erb (0.6ms)
+  Rendered users/_form6.html.erb (0.3ms)
+  Rendered users/_form7.html.erb (1.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (16.7ms)
+Compiled scaffolds.css  (1247ms)  (pid 41290)
+Compiled application.css  (1ms)  (pid 41290)
+Completed 200 OK in 1411ms (Views: 1410.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /registration.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /scaffolds.css - 200 OK (9ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /static_pages.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /application.css - 200 OK (52ms)
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /registration.js - 200 OK (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /static_pages.js - 200 OK (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/logos.png" for 127.0.0.1 at 2013-11-13 22:23:14 -0500
+Served asset /logos.png - 200 OK (0ms)
+
+
+Started GET "/assets/bgimg.png" for 127.0.0.1 at 2013-11-13 22:23:15 -0500
+Served asset /bgimg.png - 200 OK (0ms)
+
+
+Started GET "/assets/form.png" for 127.0.0.1 at 2013-11-13 22:23:15 -0500
+Served asset /form.png - 200 OK (0ms)

@@ -15,8 +15,8 @@ logos.png: logos-21b5c04b5bc1ad3a291eeab7678e4ed9.png
 logos/index.png: logos-21b5c04b5bc1ad3a291eeab7678e4ed9.png
 application.js: application-de18d7e6b44271513c9d6f27ea57b7ac.js
 application/index.js: application-de18d7e6b44271513c9d6f27ea57b7ac.js
-application.css: application-9fb46bb9d39e6b6cc631742a9f8d2e21.css
-application/index.css: application-9fb46bb9d39e6b6cc631742a9f8d2e21.css
+application.css: application-79318cf01f502ee85174d2c54170efd2.css
+application/index.css: application-79318cf01f502ee85174d2c54170efd2.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 jquery/index.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
