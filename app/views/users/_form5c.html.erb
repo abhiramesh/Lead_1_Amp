@@ -1,6 +1,6 @@
 <div id="form5c">
 	<%= label_tag :desc, 'Describe your disability and how it prevents you from working' %>
-	<%= select_tag :desc, options_for_select(desc_options), :include_blank => true %>
+	<%= text_area_tag :desc %>
 	<div class="desc">
 	</div>
 	<div class="message" id="desc_error"></div>

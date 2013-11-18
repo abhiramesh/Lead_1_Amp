@@ -27,6 +27,7 @@ class User < ActiveRecord::Base
   # end
 
   def send_lead
+    unless self.previous == "Yes, receiving benefits"
           a = Mechanize.new
             # begin
             # state = self.zipcode.to_region(state: true)
@@ -68,10 +69,12 @@ class User < ActiveRecord::Base
               puts d = Nokogiri::XML(response.content)
               self.lead = d.xpath("//lead_id").text
               self.save!
+    end
   end
 
 
   def send_lead_2
+    unless self.previous == "Yes, receiving benefits"
     a = Mechanize.new
             # geo = GeoKit::Geocoders::MultiGeocoder.multi_geocoder(self.zipcode)
             # if geo.success
@@ -114,6 +117,7 @@ class User < ActiveRecord::Base
               puts d = Nokogiri::XML(response.content)
               self.lead = d.xpath("//lead_id").text
               self.save!
+    end
   end
 
 

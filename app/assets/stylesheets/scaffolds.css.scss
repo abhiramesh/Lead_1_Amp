@@ -227,9 +227,9 @@ img.info-box{
   color: white;
   position: relative;
   top: -55px;
-  left: 0px;
+  left: -25px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   padding-left: 80px;
 }
 
@@ -361,15 +361,19 @@ input#user_phone{
 }
 
 .logos-box{
-  background: white;
-  position: relative;
-  top: -65px;
-  height: 100px;
-  border-top: solid 3px #313131;
+  background: #F6F6F6;
+  padding: 15px;
 }
 
 .disclaimer{
+  padding: 15px;
   font-size: 9px;
+  background: #313131;
+  color: white;
+}
+
+.disclaimer a {
+  color: white !important;
 }
 
 .privacy{
