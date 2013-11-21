@@ -11,8 +11,6 @@ header.png: header-1a0044c6d091c7c722e00ae73b76e549.png
 header/index.png: header-1a0044c6d091c7c722e00ae73b76e549.png
 logo.png: logo-114bb26b98598b1227fc2df29b62b216.png
 logo/index.png: logo-114bb26b98598b1227fc2df29b62b216.png
-logos.png: logos-21b5c04b5bc1ad3a291eeab7678e4ed9.png
-logos/index.png: logos-21b5c04b5bc1ad3a291eeab7678e4ed9.png
 application.js: application-de18d7e6b44271513c9d6f27ea57b7ac.js
 application/index.js: application-de18d7e6b44271513c9d6f27ea57b7ac.js
 application.css: application-5868490d6cdb64af750669cdcb0d2962.css

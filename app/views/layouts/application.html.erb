@@ -9,15 +9,6 @@
   <meta name="google-site-verification" content="n9QIM8fLAT3zcROFwHAxVCz58GizB63PCtR1L-3dz2A" />
 
   <%= yield :head %>
-    <link rel="stylesheet" type="text/css"  href="http://www.xverify.com/css/tooltip_style.css"  />
-    <script type="text/javascript" src="http://www.xverify.com/sharedjs/jquery.tools.min.js"></script>
-    <script type="text/javascript" src="http://www.xverify.com/js/clients/reven/client.js"></script>
-    <script type="text/javascript" src="http://www.xverify.com/sharedjs/xverify.js"></script>
-    <script type="text/javascript">
-    jQuery(document).ready(function(){
-      bindRequiredInputFields();
-    });
-    </script>
 </head>
 <body>
   <script>
@@ -30,21 +21,6 @@
   ga('send', 'pageview');
 
 </script>
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 980531605;
-var google_custom_params = window.google_tag_params;
-var google_remarketing_only = true;
-/* ]]> */
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/980531605/?value=0&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-<!-- End of Woopra Code -->
 <%= yield %>
 
 </body>
