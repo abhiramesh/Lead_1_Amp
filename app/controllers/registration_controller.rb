@@ -11,6 +11,8 @@ class RegistrationController < Devise::RegistrationsController
     end
     if params["xxTrustedFormCertUrl"]
       trusted = params["xxTrustedFormCertUrl"]
+    else
+      trusted = ""
     end
     @user = User.create(:ip => request.remote_ip, :campaign => campaign, :age => age, :trusted => trusted)
     sign_in @user
